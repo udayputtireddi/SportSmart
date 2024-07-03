@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soccer Equipment - SportSmart</title>
     <link rel="stylesheet" href="soccer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -25,51 +25,75 @@
     <main class="soccer-main">
         <section class="hero">
             <h2>Soccer Equipment</h2>
-            <p>Dominate the Field with Precision</p>
+            <p>Dominate the Field with Top-Notch Gear</p>
         </section>
 
         <section class="equipment-list">
             <div class="equipment-item">
                 <img src="images/soccer-ball.jpg" alt="Soccer Ball">
                 <div class="item-details">
-                    <h3>Pro-Grade Soccer Ball</h3>
-                    <p>Official Size and Weight</p>
-                    <span class="price">$39.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <h3>Professional Match Soccer Ball</h3>
+                    <p>FIFA Approved Quality</p>
+                    <span class="price">$34.99</span>
+                    <button class="add-to-cart" data-name="Professional Match Soccer Ball" data-price="34.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
                 <img src="images/soccer-cleats.jpg" alt="Soccer Cleats">
                 <div class="item-details">
-                    <h3>High-Performance Soccer Cleats</h3>
-                    <p>Superior Grip and Comfort</p>
+                    <h3>Elite Performance Soccer Cleats</h3>
+                    <p>Lightweight and Durable</p>
+                    <span class="price">$89.99</span>
+                    <button class="add-to-cart" data-name="Elite Performance Soccer Cleats" data-price="89.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="equipment-item">
+                <img src="images/soccer-goal.jpg" alt="Soccer Shin Guards">
+                <div class="item-details">
+                    <h3>Soccer Goal</h3>
+                    <p>Goal Post</p>
+                    <span class="price">$24.99</span>
+                    <button class="add-to-cart" data-name="Soccer Goal" data-price="24.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="equipment-item">
+                <img src="images/soccer-jersey.jpg" alt="Goalkeeper Gloves">
+                <div class="item-details">
+                    <h3>Soccer Jersey</h3>
+                    <p>Manchester City Jersey </p>
                     <span class="price">$99.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-            <div class="equipment-item">
-                <img src="images/soccer-jersey.jpg" alt="Soccer Jersey">
-                <div class="item-details">
-                    <h3>Premium Soccer Jersey</h3>
-                    <p>Breathable and Lightweight Fabric</p>
-                    <span class="price">$59.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-            <div class="equipment-item">
-                <img src="images/soccer-goal.jpg" alt="Soccer Goal">
-                <div class="item-details">
-                    <h3>Portable Soccer Goal</h3>
-                    <p>Easy Setup and Durable Design</p>
-                    <span class="price">$129.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Soccer Jersey" data-price="99.99">Add to Cart</button>
                 </div>
             </div>
         </section>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const name = button.getAttribute('data-name');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const itemIndex = cart.findIndex(item => item.name === name);
+
+                    if (itemIndex > -1) {
+                        cart[itemIndex].quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${name} has been added to the cart!`);
+                });
+            });
+        });
+    </script>
+
     <script src="soccer.js"></script>
-    
 </body>
 </html>
+
 

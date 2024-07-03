@@ -35,7 +35,7 @@
                     <h3>Professional Cricket Bat</h3>
                     <p>Handcrafted English Willow</p>
                     <span class="price">$299.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Professional Cricket Bat" data-price="299.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
@@ -44,7 +44,7 @@
                     <h3>Premium Leather Cricket Ball</h3>
                     <p>Match-Quality Seam and Stitching</p>
                     <span class="price">$24.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Premium Leather Cricket Ball" data-price="24.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
@@ -53,7 +53,7 @@
                     <h3>Pro-Series Batting Gloves</h3>
                     <p>Superior Protection and Comfort</p>
                     <span class="price">$79.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Pro-Series Batting Gloves" data-price="79.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
@@ -62,7 +62,7 @@
                     <h3>Advanced Safety Helmet</h3>
                     <p>Lightweight with Optimal Protection</p>
                     <span class="price">$129.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Advanced Safety Helmet" data-price="129.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
@@ -71,12 +71,37 @@
                     <h3>Cricket Pads</h3>
                     <p>For Abdominal Protection</p>
                     <span class="price">$19.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Cricket Pads" data-price="19.99">Add to Cart</button>
                 </div>
             </div>
         </section>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const name = button.getAttribute('data-name');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const itemIndex = cart.findIndex(item => item.name === name);
+
+                    if (itemIndex > -1) {
+                        cart[itemIndex].quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${name} has been added to the cart!`);
+                });
+            });
+        });
+    </script>
+
     <script src="cricket.js"></script>
 </body>
 </html>
+

@@ -35,7 +35,7 @@
                     <h3>Pro Series Badminton Racket</h3>
                     <p>Lightweight Graphite Construction</p>
                     <span class="price">$129.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Pro Series Badminton Racket" data-price="129.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
@@ -44,7 +44,7 @@
                     <h3>Tournament Grade Shuttlecocks</h3>
                     <p>Set of 12 - Premium Goose Feather</p>
                     <span class="price">$19.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Tournament Grade Shuttlecocks" data-price="19.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
@@ -53,8 +53,8 @@
                     <h3>Professional Badminton Shoes</h3>
                     <p>Superior Grip and Cushioning</p>
                     <span class="price">$89.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
+                    <button class="add-to-cart" data-name="Professional Badminton Shoes" data-price="89.99">Add to Cart</button>
+                </div>  
             </div>
             <div class="equipment-item">
                 <img src="images/badminton-bag.jpg" alt="Badminton Bag">
@@ -62,11 +62,47 @@
                     <h3>Deluxe Badminton Bag</h3>
                     <p>Spacious with Multiple Compartments</p>
                     <span class="price">$59.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Deluxe Badminton Bag" data-price="59.99">Add to Cart</button>
                 </div>
             </div>
         </section>
-    </main>
+        
+        <script>
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const name = button.getAttribute('data-name');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const itemIndex = cart.findIndex(item => item.name === name);
+        
+                    if (itemIndex > -1) {
+                        cart[itemIndex].quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+        
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    console.log(JSON.parse(localStorage.getItem('cart'))); // Log the cart contents
+                    alert(`${name} has been added to the cart!`);
+                    updateCartCount(); // Add this line to update the cart count
+                });
+            });
+        
+            // Function to update the cart count display
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+                const cartCountElement = document.getElementById('cart-count');
+                if (cartCountElement) {
+                    cartCountElement.textContent = cartCount;
+                }
+            }
+        
+            // Initialize cart count on page load
+            document.addEventListener('DOMContentLoaded', updateCartCount);
+        </script>
 
     <script src="badminton.js"></script>
 </body>

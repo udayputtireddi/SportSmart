@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball Equipment - SportSmart</title>
     <link rel="stylesheet" href="basketball.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -25,50 +25,76 @@
     <main class="basketball-main">
         <section class="hero">
             <h2>Basketball Equipment</h2>
-            <p>Elevate Your Game to New Heights</p>
+            <p>Step Up Your Game with High-Quality Gear</p>
         </section>
 
         <section class="equipment-list">
             <div class="equipment-item">
                 <img src="images/basketball.jpg" alt="Basketball">
                 <div class="item-details">
-                    <h3>Pro-Grade Basketball</h3>
+                    <h3>Professional Basketball</h3>
                     <p>Official Size and Weight</p>
-                    <span class="price">$59.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="price">$29.99</span>
+                    <button class="add-to-cart" data-name="Professional Basketball" data-price="29.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
                 <img src="images/basketball-shoes.jpg" alt="Basketball Shoes">
                 <div class="item-details">
                     <h3>High-Performance Basketball Shoes</h3>
-                    <p>Superior Grip and Ankle Support</p>
-                    <span class="price">$129.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Excellent Support and Traction</p>
+                    <span class="price">$119.99</span>
+                    <button class="add-to-cart" data-name="High-Performance Basketball Shoes" data-price="119.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
                 <img src="images/basketball-jersey.jpg" alt="Basketball Jersey">
                 <div class="item-details">
-                    <h3>Premium Basketball Jersey</h3>
-                    <p>Breathable and Lightweight Fabric</p>
+                    <h3>Pro-Level Basketball Jersey</h3>
+                    <p>Breathable and Durable</p>
                     <span class="price">$49.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Pro-Level Basketball Jersey" data-price="49.99">Add to Cart</button>
                 </div>
             </div>
             <div class="equipment-item">
                 <img src="images/basketball-hoop.jpg" alt="Basketball Hoop">
                 <div class="item-details">
                     <h3>Adjustable Basketball Hoop</h3>
-                    <p>Durable with Breakaway Rim</p>
+                    <p>For Indoor and Outdoor Use</p>
                     <span class="price">$299.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-name="Adjustable Basketball Hoop" data-price="299.99">Add to Cart</button>
                 </div>
             </div>
         </section>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const name = button.getAttribute('data-name');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const itemIndex = cart.findIndex(item => item.name === name);
+
+                    if (itemIndex > -1) {
+                        cart[itemIndex].quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${name} has been added to the cart!`);
+                });
+            });
+        });
+    </script>
+
     <script src="basketball.js"></script>
 </body>
 </html>
+
+
 

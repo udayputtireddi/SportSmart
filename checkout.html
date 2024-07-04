@@ -54,29 +54,6 @@
             </form>
         </section>
     </main>
-    <script>
-        document.getElementById('checkout-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Validate and process the form data
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const address = document.getElementById('address').value;
-            const ccNumber = document.getElementById('cc-number').value;
-            const ccCVV = document.getElementById('cc-cvv').value;
-
-            // Basic validation (for demo purposes, you should improve this)
-            if (name && phone && address && ccNumber && ccCVV) {
-                // Store user data in localStorage (or send it to your server)
-                localStorage.setItem('user', JSON.stringify({ name, phone, address, ccNumber, ccCVV }));
-
-                // Redirect to the thank you page
-                window.location.href = 'thank-you.html';
-            } else {
-                alert('Please fill out all fields.');
-            }
-        });
-    </script>
 
     <script src="checkout.js"></script>
 </body>

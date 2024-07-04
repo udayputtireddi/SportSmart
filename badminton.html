@@ -66,43 +66,6 @@
                 </div>
             </div>
         </section>
-        
-        <script>
-            const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        
-            addToCartButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const name = button.getAttribute('data-name');
-                    const price = parseFloat(button.getAttribute('data-price'));
-                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                    const itemIndex = cart.findIndex(item => item.name === name);
-        
-                    if (itemIndex > -1) {
-                        cart[itemIndex].quantity += 1;
-                    } else {
-                        cart.push({ name, price, quantity: 1 });
-                    }
-        
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    console.log(JSON.parse(localStorage.getItem('cart'))); // Log the cart contents
-                    alert(`${name} has been added to the cart!`);
-                    updateCartCount(); // Add this line to update the cart count
-                });
-            });
-        
-            // Function to update the cart count display
-            function updateCartCount() {
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-                const cartCountElement = document.getElementById('cart-count');
-                if (cartCountElement) {
-                    cartCountElement.textContent = cartCount;
-                }
-            }
-        
-            // Initialize cart count on page load
-            document.addEventListener('DOMContentLoaded', updateCartCount);
-        </script>
 
     <script src="badminton.js"></script>
 </body>

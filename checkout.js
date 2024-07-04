@@ -46,3 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
     displayCheckoutItems();
     checkoutForm.addEventListener('submit', handleFormSubmission);
 });
+

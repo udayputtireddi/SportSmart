@@ -4,9 +4,8 @@
 This project is a comprehensive sports equipment e-commerce website built using HTML, CSS, and JavaScript. The website features multiple pages including a homepage, product pages for various sports, a cart page, and a checkout page. It also includes a sophisticated thank you page that appears after a successful purchase. The website is designed to provide a seamless and visually appealing shopping experience.
 
 ## Preview
-![Homepage Preview](./images/preview-homepage.png)
-![Products Page Preview](./images/preview-products.png)
-![Cart Page Preview](./images/preview-cart.png)
+![Homepage Preview](./images/homepage.png)
+![Products Page Preview](./images/products-page.png)
 
 ## Key Features
 - **Responsive Design:** The website is fully responsive, ensuring a seamless experience on both desktop and mobile devices.
@@ -47,7 +46,6 @@ This project is a comprehensive sports equipment e-commerce website built using 
 - **Add to Cart:** Click on the "Add to Cart" button on any product to add it to your cart.
 - **View Cart:** Click on the cart icon to view items in your cart.
 - **Checkout:** Proceed to the checkout page to enter your details and complete the purchase.
-- **Thank You Page:** After completing a purchase, you will be redirected to a thank you page.
 
 ## File Structure
 ```plaintext
@@ -59,7 +57,6 @@ This project is a comprehensive sports equipment e-commerce website built using 
 |   |-- checkout.js
 |   |-- products.js
 |-- images
-|   |-- preview-homepage.png
-|   |-- preview-products.png
-|   |-- preview-cart.png
+|   |-- homepage.png
+|   |-- products-page.png
 |-- README.md

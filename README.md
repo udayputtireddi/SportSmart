@@ -6,6 +6,7 @@ This project is a comprehensive sports equipment e-commerce website built using 
 ## Preview
 ![Homepage Preview](./images/homepage.png)
 ![Products Page Preview](./images/products-page.png)
+![image](https://github.com/udayputtireddi/SportSmart/assets/101133572/fd8e763b-bd91-4619-a62d-41082d6b55fa)
 
 ## Key Features
 - **Responsive Design:** The website is fully responsive, ensuring a seamless experience on both desktop and mobile devices.

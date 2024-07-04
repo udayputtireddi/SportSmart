@@ -3,10 +3,14 @@
 ## Overview
 This project is a comprehensive sports equipment e-commerce website built using HTML, CSS, and JavaScript. The website features multiple pages including a homepage, product pages for various sports, a cart page, and a checkout page. It also includes a sophisticated thank you page that appears after a successful purchase. The website is designed to provide a seamless and visually appealing shopping experience.
 
+##LiveProject
+View the Live Project [here](http://127.0.0.1:5500/index.html)
+
 ## Preview
-![Homepage Preview](./images/homepage.png)
-![Products Page Preview](./images/products-page.png)
+HOMEPAGE!
 ![image](https://github.com/udayputtireddi/SportSmart/assets/101133572/fd8e763b-bd91-4619-a62d-41082d6b55fa)
+PRODUCTS-PAGE!
+![image](https://github.com/udayputtireddi/SportSmart/assets/101133572/eb05de6f-6fbe-45b7-a7e3-1810cd22f30b)
 
 ## Key Features
 - **Responsive Design:** The website is fully responsive, ensuring a seamless experience on both desktop and mobile devices.
@@ -14,7 +18,6 @@ This project is a comprehensive sports equipment e-commerce website built using 
 - **Checkout Process:** The checkout page collects user information and processes the purchase.
 - **LocalStorage Integration:** The cart uses LocalStorage to persist cart items across sessions.
 - **Dynamic Content:** JavaScript is used to dynamically update the cart and checkout pages based on user interactions.
-- **Fancy Thank You Page:** After completing a purchase, users are redirected to a visually appealing thank you page with animations and graphics.
 
 ## Technologies Used
 - **HTML5:** For the structure and layout of the web pages.

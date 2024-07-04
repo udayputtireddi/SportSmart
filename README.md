@@ -4,8 +4,8 @@
 This project is a comprehensive sports equipment e-commerce website built using HTML, CSS, and JavaScript. The website features multiple pages including a homepage, product pages for various sports, a cart page, and a checkout page. It also includes a sophisticated thank you page that appears after a successful purchase. The website is designed to provide a seamless and visually appealing shopping experience.
 
 ## Preview
-![Homepage Preview](./images/homepage.png)
-![Products Page Preview](./images/products-page.png)
+![Homepage Preview](./images/homepage.jpg)
+![Products Page Preview](./images/products-page.jpg)
 
 ## Key Features
 - **Responsive Design:** The website is fully responsive, ensuring a seamless experience on both desktop and mobile devices.

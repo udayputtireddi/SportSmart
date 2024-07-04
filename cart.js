@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-                <img src="${item.image || 'default-image.png'}" alt="${item.name || 'Unknown Item'}">
-                <div>
+                <img src="${item.image || 'default-image.png'}" alt="${item.name || 'Unknown Item'}" class="cart-item-image">
+                <div class="cart-item-details">
                     <h3>${item.name || 'Unknown Item'}</h3>
                     <p>Price: $${item.price || '0.00'}</p>
                     <p>Quantity: ${item.quantity || 1}</p>
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCart();
 });
+
 
 
 

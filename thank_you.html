@@ -4,34 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <link rel="stylesheet" href="thank_you.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="thank-you.css">
 </head>
 <body>
-    <header>
-        <h1>SportSmart</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="thank-you-main">
-        <h2>Thank You for Your Purchase!</h2>
-        <p>Your order number is <span id="order-id"></span>.</p>
-    </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const orderId = urlParams.get('order_id');
-            document.getElementById('order-id').textContent = orderId;
-        });
-    </script>
+    <div class="thank-you-container">
+        <div class="thank-you-message">
+            <h1>Thank You!</h1>
+            <p>Your purchase was successful. We appreciate your business!</p>
+        </div>
+        <div class="thank-you-animation">
+            <!-- You can include an animated SVG or a fancy graphic here -->
+            <img src="images/thank-you-graphic.svg" alt="Thank You">
+        </div>
+    </div>
 </body>
 </html>
+
+

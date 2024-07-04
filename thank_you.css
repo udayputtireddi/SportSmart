@@ -1,13 +1,49 @@
-.thank-you-main {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.thank-you-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    margin-top: 50px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.thank-you-main h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.thank-you-message h1 {
+    font-size: 3rem;
+    color: #28a745;
 }
 
-.thank-you-main p {
-    font-size: 1.5em;
+.thank-you-message p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #555;
 }
+
+.thank-you-animation img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+

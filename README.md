@@ -46,6 +46,7 @@ This project is a comprehensive sports equipment e-commerce website built using 
 - **Add to Cart:** Click on the "Add to Cart" button on any product to add it to your cart.
 - **View Cart:** Click on the cart icon to view items in your cart.
 - **Checkout:** Proceed to the checkout page to enter your details and complete the purchase.
+- **Thank You Page:** After completing a purchase, you will be redirected to a thank you page.
 
 ## File Structure
 ```plaintext
@@ -57,6 +58,6 @@ This project is a comprehensive sports equipment e-commerce website built using 
 |   |-- checkout.js
 |   |-- products.js
 |-- images
-|   |-- homepage.png
-|   |-- products-page.png
+|   |-- homepage.jpg
+|   |-- products-page.jpg
 |-- README.md

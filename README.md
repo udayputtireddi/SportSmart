@@ -1,7 +1,7 @@
 # Sports Equipment E-Commerce Website
 
 ## Overview
-This project is a comprehensive sports equipment e-commerce website built using HTML, CSS, and JavaScript. The website features multiple pages including a homepage, product pages for various sports, a cart page, and a checkout page. The website is designed to provide a seamless and visually appealing shopping experience.
+This project is a comprehensive sports equipment e-commerce website built using HTML, CSS, and JavaScript. The website features multiple pages, including a homepage, product pages for various sports, a cart page, and a checkout page. The website is designed to provide a seamless and visually appealing shopping experience.
 
 ## LiveProject
 View the Live Project [here](http://127.0.0.1:5500/index.html)

@@ -12,18 +12,6 @@ HOMEPAGE!
 PRODUCTS-PAGE!
 ![image](https://github.com/udayputtireddi/SportSmart/assets/101133572/eb05de6f-6fbe-45b7-a7e3-1810cd22f30b)
 
-## Key Features
-- **Responsive Design:** The website is fully responsive, ensuring a seamless experience on both desktop and mobile devices.
-- **Interactive Cart:** Users can add items to their cart, view the cart contents, and remove items if needed.
-- **Checkout Process:** The checkout page collects user information and processes the purchase.
-- **LocalStorage Integration:** The cart uses LocalStorage to persist cart items across sessions.
-- **Dynamic Content:** JavaScript is used to dynamically update the cart and checkout pages based on user interactions.
-
-## Technologies Used
-- **HTML5:** For the structure and layout of the web pages.
-- **CSS3:** For styling the website and making it visually appealing.
-- **JavaScript:** For adding interactivity and managing cart functionality.
-- **LocalStorage:** To store cart data and persist it across sessions.
 
 ## Installation and Usage
 
